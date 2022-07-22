@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>LameBrain Documentation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+
+body {
+	background-color: White;
+	margin:0px;
+	padding:0px;
+}
+a:link {
+	color:#333;
+	text-decoration : none;
+}
+
+a:hover {
+	color:#660000;
+	text-decoration : none;
+}
+
+
+
+
+DIV.main {
+	margin-left:210px;
+	margin-right: 10px;
+	padding-top : 20px;
+	width:500px;
+}
+
+body, .normal {
+	font-family: Helvetica, sans-serif;
+	font-size: 10pt;
+	color:#666;
+}
+
+IMG.thumbnail {
+	border : 1px #ccc solid;
+	margin : 1%;
+}
+
+.h1, .h2, .h3, .pageheader {
+	font-weight: bold;
+}
+
+.h1, .h2 {
+	color:#333;
+	text-transform:lowercase;
+}
+
+
+
+.pageheader {
+	font-size: 22pt;
+	padding:5px;
+	margin-left : -20px;
+	color:#000;
+	/*background-image: url("images/h1_bg.png");*/
+}
+
+.h1 {
+	font-size: 18pt;
+	padding:5px;
+	margin-left : -20px;
+	background-color: #ffffcc;
+	border-bottom : 1px solid #333;
+	/*background-image: url("images/h1_bg.png");*/
+}
+
+.h2 {
+	font-size: 14pt;
+	border-bottom : 1px solid #333;
+}
+.h3 {
+	font-size: 11pt;
+}
+.h1:before, .h2:before, div.sidebar-header:before{
+	content:":: ";
+}
+.code {
+	font-family: Monaco, Courier New, Courier,Monospaced;
+	margin-left : 20px;
+	margin-top : 5px;
+	margin-bottom : 5px;
+}
+
+li {
+	margin-bottom: 10px;
+}
+li>.h3 {
+	margin-left : 0px;
+}
+
+
+
+/* sidebar */
+DIV.sidebar {
+	float:left;
+	width:150px;
+	background-color: #ccccff;
+	/*background-image : url("images/sidebar_bg.png");*/
+	
+	position:absolute;
+	padding:10px;
+}
+ul.sidebar {
+	margin-top: 3px;
+	margin-left:16px;
+	padding:0px;
+	
+}
+li.sidebar {
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding:0px;
+}
+div.sidebar-header{
+	color:#333;
+	font-weight:bold;
+	border-bottom:1px solid #333;
+	text-transform:lowercase;
+}
+
+
+</style>
+<script language="Javascript"> 
+	function popup(sPicURL) { 
+		window.open("popup.html?"+sPicURL, "", "resizable=0,HEIGHT=200,WIDTH=200");
+	}
+</script>
+</head>
+
+<body>
+<div class="sidebar">
+	<div align="center"><img src="images/lamebrain_icon.png" alt="LameBrain Icon" width="128" height="128" alt="Arrrgh!" /></div>
+	<div class="sidebar-header">About LameBrain</div>
+	<ul class="sidebar">
+		<li class="sidebar"><a href="#whatislamebrain">What is LameBrain?</a><br /></li>
+		<li class="sidebar"><a href="#howmuchdoeslamebraincost">How much does LameBrain cost?</a><br /></li>
+		<li class="sidebar"><a href="#whomadelamebrain">Who made LameBrain?</a><br /></li>
+		<li class="sidebar"><a href="#acknowledgements">Acknowledgements</a><br /></li>		
+	</ul>
+
+	<div class="sidebar-header"><a href="#whatsnew" title="What's New" style="border:0px;">What's New</a></div>
+	<br />
+	
+	<div class="sidebar-header">Tool Descriptions</div>
+	<ul class="sidebar">
+		<li class="sidebar"><a href="#singlefileencoder">Single File Encoder</a><br /></li>
+		<li class="sidebar"><a href="#batchencoder">Batch Encoder</a><br /></li>
+		<li class="sidebar"><a href="#cdripper">CD Ripper</a><br /></li>
+		<li class="sidebar"><a href="#lamesettings">LAME Settings</a><br /></li>
+		<li class="sidebar"><a href="#preferences">Preferences</a><br /></li>
+	</ul>
+
+	<div class="sidebar-header">Frequently Asked Questions</div>
+	<ul class="sidebar">
+		<li class="sidebar"><a href="#whatversionlame">What version of LAME comes with LameBrain?</a><br /></li>
+		<li class="sidebar"><a href="#whyslow">Why is LAME so slow on the Mac?  How can I make it faster?</a><br /></li>
+		<li class="sidebar"><a href="#whycantencode101x">Why can't I encode anything with LameBrain under OS X 10.1.x?</a><br /></li>
+		<li class="sidebar"><a href="#bugreport">How do I make a bug report/feature request?</a><br /></li>
+	</ul>
+
+	<div class="sidebar-header">Donations</div>
+	If you find LameBrain useful, please consider making a donation.
+	<ul class="sidebar">
+		<li class="sidebar"><a href="https://www.paypal.com/xclick/business=coj%40funkatron.com&item_name=LameBrain&item_number=POOP-1&no_shipping=1&no_note=1&tax=0&currency_code=USD">Donate via Paypal</a><br /></li>
+	</ul>
+
+	<div class="sidebar-header">More Information</div>
+	<ul class="sidebar">
+		<li class="sidebar"><a href="mailto:lamebrain-general-subscribe@funkatron.com">LameBrain Mailing List</a><br /></li>
+		<li class="sidebar"><a href="http://www.funkatron.com">funkatron.com</a><br /></li>
+		<li class="sidebar"><a href="http://www.mp3dev.org">LAME Homepage</a><br /></li>
+		<li class="sidebar"><a href="http://www.r3mix.net/">r3mix.net</a><br /></li>
+		<li class="sidebar"><a href="http://www.freedb.org/">FreeDB.org</a><br /></li>
+	</ul>
+
+</div>
+
+<div class="main">
+	<div class="pageheader">LameBrain 0.6.0 Documentation
+	<div class="normal">
+		<em>Last updated: May 17, 2003</em><p />
+		<em>Much of this document is based on the help files/man pages of
+		<a href="http://www.mp3dev.org">LAME</a>. Any pertinent copyrights belong to the
+		authors of the original documents.</em><p />
+	</div>
+	</div>
+	
+	<p class="h1">About LameBrain</p>
+	<p class="h2"><a name="whatislamebrain"></a>What is LameBrain?</p>
+	LameBrain is a LAME front-end for OS X.  It consists of three primary tools:<p />
+	<ul>
+		<li><div class="h3">Single File Encoder</div>
+		The <a href="#singlefileencoder">Single File Encoder</a> handles "one-at-a-time"
+		encoding.  It is useful for situations where you need precise control over the
+		encoding settings.
+		</li>
+		<li><div class="h3">Batch Encoder</div>
+		The <a href="#batchencoder">Batch Encoder</a> processes multiple files.  You can
+		drag and drop files or folders on the Batch Encoder to add them to the queue.  Each
+		entry in the queue can be assigned a separate <a href="#profilestab">encoding
+		profile</a>.
+		</li>
+		<li><div class="h3">CD Ripper</div>
+		The <a href="#cdripper">CD Ripper</a> automates the process of encoding files off
+		of CDs and assigning proper ID3 tag information.  It has integrated
+		<a href="http://www.freedb.org/">FreeDB</a> support for downloading CD information.
+		</li>
+	</ul>
+
+	Each of these tools uses LAME to convert audio files to mp3 format.  A LAME binary for
+	OS X is included with LameBrain.<p />
+	
+	The <a href="#lamesettings">LAME Settings</a> window provides access to most of the
+	commonly-used LAME settings.  It also includes an "<a href="#experttab">Expert</a>"
+	option that allows the user to enter any LAME command line settings.  Any combination
+	of settings can be saved as an <a href="#profilestab">encoding profile</a>, to be
+	loaded later or used in the <a href="#batchencoder">Batch Encoder</a>.
+	<p />
+	
+	<p class="h2"><a name="howmuchdoeslamebraincost"></a>How much does LameBrain cost?</p>
+	LameBrain is <b>free</b>.  It is not open source (yet), but you can feel free to use it 
+	and distribute it as you wish, so long as it remains unaltered.<p />
+	
+	I do, however, accept donations.  If you find LameBrain useful, please consider
+	<a href="https://www.paypal.com/xclick/business%3Dcoj%40funkatron.com%26item_name%3DLameBrain%26item_number%3DPOOP-1%26no_shipping%3D1%26no_note%3D1%26tax%3D0%26currency_code%3DUSD" title="My baby's gotta eat!">making a donation via PayPal</a>.  Any amount is
+	appreciated!
+	<p />
+	
+	<p class="h2"><a name="whomadelamebrain"></a>Who made LameBrain?</p>
+	I did.  My name is Ed Finkler, and I'm a web developer for <a href="http://www.cerias.purdue.edu">CERIAS</a> at <a href="http://www.purdue.edu">Purdue
+	University</a>.  My personal page is <a href="http://www.funkatron.com">funkatron.com</a><p />
+	
+	<p class="h2"><a name="acknowledgements"></a>Acknowledgements</p>
+	LameBrain includes a version of LAME compiled under OS X 10.2.5. Per the requirements of LAME's LGPL license, the source code is available at <a href="http://www.funkatron.com/blog/files/lame-3.93.1.tar.gz">http://www.funkatron.com/blog/files/lame-3.93.1.tar.gz</a>.<p />
+
+	LameBrain includes a version of id3ed compiled under OS X 10.2.5.  Per the requirements of id3ed's GPL license, the source code is available at <a href="http://www.funkatron.com/blog/files/id3ed-1.10.4.tar.gz">http://www.funkatron.com/blog/files/id3ed-1.10.4.tar.gz</a>.<p />
+
+	Much of LameBrain is based on the work of others:
+	<ul>
+		<li>LAME's homepage is <a href="http://www.mp3dev.org">http://www.mp3dev.org</a></li>
+		<li>id3ed's homepage is <a href="http://www.dakotacom.net/~donut/programs/id3ed.html">http://www.dakotacom.net/~donut/programs/id3ed.html</a></li>
+		<li>Control Bar icons by <a href="http://www.transmtt-r.com">Ken Holewczynski</a></li>
+		<li>Original Skeletor icon by Matt Harrington</li>
+		<li>Uses DrawControl, IconUtil, and MacXLib's plugins by <a href="http://www.mac-x-software.com/">Mac-X-Software</a></li>
+		<li>CFPlugin by <a href="http://kevin.sb.org/Software/Plugins.html">TildeSoft</a>.  Thanks to Kevin Ballard for the examples.</li>
+		<li>CarbonDeclares module maintained by <a href="http://kevin.sb.org/Software/Code.html">TildeSoft</a></li>
+		<li>RealEasyPrefs Module by <a href="http://www.catdis.com/realcode/realcode.htm">RealCode</a></li>
+		<li>MBS Plugin by <a href="http://www.monkeybreadsoftware.de">Monkeybread Software</a></li>
+		<li><a href="http://www.monkeybreadsoftware.de/realbasic/opensource.html">MP3Info Class</a> by Christian Schmitz</li>
+		<li><a href="http://www.ifc.cnr.it/riccardo/RealBasicDevelopment/VolumeManagerPlugin/VolumeManagerIndex.htm">Volume Manager</a> plugin by Dr. Riccardo Favilla</li>
+	
+	</ul>
+
+	<div class="h1"><a name="whatsnew"></a>What's New in 0.6.0</div>
+	
+	<ul>
+		<li>If you previous installed a preview version of 0.6.0, you should delete your preferences file BEFORE running 0.6.0 final.  It should be &lt;your home directory&gt;:Library:Preferences:LameBrain 0.6 Prefs</li>
+		<li>All main encoding windows (single file/batch/cd ripper) have been combined into a single window.  Stats have been moved to the LAME settings window under the Stats tab.  Size of LAME settings window has been reduced. Appropriate changes have been made to the Preferences window</li>
+		<li>ID3v1.1 tag viewing and editing is enabled using id3ed <http://www.dakotacom.net/~donut/programs/id3ed.html>.  Only v1.1 tags are currently supported</li>
+		<li>FreeDB server preference can now be selected from a dropdown menu.  You can add or remove servers by editing the data/freedb_mirrors.txt file</li>
+		<li>LAME executable has been moved to bin/ subdirectory</li>
+		<li>Profiles have been moved into "Profiles" subdirectory.  You will need to move your custom profiles into this folder for them to be usable</li>
+		<li>Extended ASCII chars are now converted to "_" in output filenames</li>
+		<li>Added debug logging functionality.  Debug info is logged to file in "logs/" subdir, and can be turned on or off in Preferences.  Logging can slow LB down and the file can get quite large, so this should only be used if you're having problems</li>
+		<li>Added ability to view TOC.plist file of currently selected CD. Useful for debugging purposes</li>
+		<li>New, fancier About window. Woo!</li>
+		<li>Eject button removed since preview versions; will reappear soon</li>
+		<li>Experimental: LameBrain will try to copy the ID3 tags from an input mp3 file to the re-encoded version</li>
+		<li>Fancy new icons for the control bar by Ken Holewczynski</li>
+		<li>Clip player will now show artist and title if ID3 info is present</li>
+		<li>Fixed bug where LameBrain would crash if it found a mounted DVD</li>
+		<li>Fixed bugs with double-quotes in ID3 tags when CD ripping</li>
+		<li>Fixed bug where Year info was not retrieved from FreeDB</li>
+		<li>fixed issue where colons in CD info tags were causing Nil Object Exceptions when the .m3u file was written</li>
+	</ul>
+	
+	
+	<div class="h1">Tool Descriptions</div>
+	
+	<p class="h2"><a name="singlefileencoder"></a>Single-File Encoder</p>
+	<a href="javascript:popup('images/screenshot_singlefileencoder.jpg')" title="View Screenshot"><img class="thumbnail" src="images/thumb_screenshot_singlefileencoder.jpg" alt="Single File Encoder Screenshot" width="100" height="34" border="1" align="right" /></a>
+	As you would expect, this window handles single-file encoding functions.  You can drag and drop a file anywhere on the window,
+	and the input and output files will be set up for you automatically.  You can also choose inpuot and output files using the <img src="images/dirbutton.jpg" alt="[...]" width="22" height="22" align="middle" /> buttons.<p />
+	
+	Encoding settings for the Single-File Encoder are taken from the <a href="#lamesettings">LAME Settings</a> window.<p />
+	
+	You can listen to the input file by right-clicking/CTRL+clicking on the Input File box and selecting "Play file".	
+	
+	<p class="h2"><a name="batchencoder"></a>Batch Encoder</p>
+	<a href="javascript:popup('images/screenshot_batchencoder.jpg')" title="View Screenshot"><img class="thumbnail" src="images/thumb_screenshot_batchencoder.jpg" alt="Batch Encoder Screenshot" width="100" height="65" border="1" align="right" /></a>
+	The Batch Encoder allows you to encode multiple files with LAME.  Drag and drop files or folders onto the
+	Batch Encoder window to add them to the queue.<p />
+	
+	The Batch Encoder has its own encoding profile menu, and does <i>not</i> use the settings from the LAME Settings window.
+	When a file is initiall added to the queue, it is assigned the currently selected profile in the Encoding profile menu, but
+	each queue entry can use a different profile.  You can change one or more entries profile by selecting it/them in the queue and picking a 
+	different profile from the Encoding profile menu.<p />
+	
+	You can listen to a file in the queue by right-clicking/CTRL+clicking on the entry and selecting "Play file".	<p />
+	
+	<ul>
+		<li><div class="h3">Encoding profile</div>
+			This menu lists the currently available profiles.  When a file is added to the queue, the currently selected profile in this
+			menu will be assigned to it.  Profiles are created in the <a href="#lamesettings">Lame Settings</a> window's
+			<a href="#profilestab">Profiles tab</a>.
+		</li>
+		<li><div class="h3">Target directory</div>
+			This indicates where encoded files will be placed. You can change this location by clicking on the <img src="images/dirbutton.jpg" alt="[...]" width="22" height="22" align="middle" /> button.
+		</li>
+		<li><div class="h3">Delete Selected</div>
+			Clicking this button will delete all selected entries in the queue.
+		</li>
+		<li><div class="h3">Delete All</div>
+			Clicking this button will delete <i>everything</i> in the queue.
+		</li>
+	</ul>
+	
+	<p class="h2"><a name="cdripper"></a>CD Ripper</p>
+	<a href="javascript:popup('images/screenshot_cdripper.jpg')" title="View Screenshot"><img class="thumbnail" src="images/thumb_screenshot_cdripper.jpg" alt="CD Ripper Screenshot" width="100" height="84" border="1" align="right" /></a>
+	The CD Ripper is basically a modified version of the batch encoder that has specialized handling for audio CD tracks.  It can do lookups to the FreeDB server specified in the <a href="#preferences">Preferences window</a> to gather artist/title/track information.<p />
+	
+	The <a href="#namingscheme">naming scheme</a> for files encoded with the CD Ripper can be customized in the <a href="#preferences">Preferences window</a>.<p />
+	
+	You can listen to a track by right-clicking/CTRL+clicking on the track in the track list and selecting "Play file".<p />
+	
+	<ul>
+		<li><div class="h3">CD Drive</div>
+			This menu contains a list of all mounted Audio CDs.  In theory it should support multiple CD drives, but I haven't actually had
+			a chance to test this.
+			<p />
+		</li>
+		<li><div class="h3">Artist</div>
+			The artist associated with this CD.
+			<p />
+		</li>
+		<li><div class="h3">Title</div>
+			The title of this CD.
+			<p />
+		</li>
+		<li><div class="h3">Genre</div>
+			The FreeDB genre in which this CD is classified.
+			<p />
+		</li>
+		<li><div class="h3">Year</div>
+			The year this CD was released.
+			<p />
+		</li>
+		<li><div class="h3">Track List</div>
+			The CD Ripper Track List contains the following columns:
+			<ul>
+				<li><i>Checkbox</i><br />
+				If the checkbox is checked, this track will be encoded.
+				</li>
+				<li><i>#</i><br />
+				The number of this track.
+				</li>
+				<li><i>File name</i><br />
+				The OS-assigned file name on the audio CD.  This is <i>not</i> the output filename.
+				</li>
+				<li><i>Title</i><br />
+				The title of this track.
+				</li>
+				<li><i>Time</i><br />
+				The length of this track in mm:ss.
+				</li>
+			</ul>
+			<p />
+		</li>
+		<li><div class="h3">Target Directory</div>
+			The base directory for encoded tracks.  The <a href="#namingscheme">naming scheme</a> path will be appended to this directory. You can change this location by clicking on the <img src="images/dirbutton.jpg" alt="[...]" width="22" height="22" align="middle" /> button.
+			<p />
+		</li>
+		<li><div class="h3">Query FreeDB Server</div>
+			This initiates a query to the FreeDB server.
+			<p />
+		</li>
+		<li><div class="h3">Refresh CD Info</div>
+			This forces the CD Ripper to re-scan the mounted drives for audio CDs.  You must do this whenever a CD is ejected or inserted while the CD Ripper window is open -- LameBrain can't detect these actions automatically.
+			<p />
+		</li>
+	</ul>
+	
+	<p class="h2"><a name="lamesettings"></a>LAME Settings</p>
+	<a href="javascript:popup('images/screenshot_lamesettings.jpg')" title="View Screenshot"><img class="thumbnail" src="images/thumb_screenshot_lamesettings.jpg" alt="LAME Settings Screenshot" width="100" height="41" border="1" align="right" /></a>
+
+	The Encoding Settings window controls all settings related to the LAME encoding process.  The <a href="#singlefileencoder">Single File Encoder</a> and <a href="#cdripper">CD Ripper</a> get their encoding settings from this window, and the <a href="#batchencoder">Batch Encoder</a> uses the encoding profiles that are created in the <a href="#profilestab">Profiles tab</a>.
+
+	<ul>
+		<li><div class="h3">Encoding Settings</div>
+			<strong>Presets:</strong><br />
+			These presets are built-into LAME. Using any one of these will override any other settings.
+			<ul>
+				<li><em>Presets<br />
+					</em>This is a set of presets using <a href="#abr">ABR</a> encoding.
+					<ul>
+						<li>phone =&gt; 16kbps/mono</li>
+						<li>voice =&gt; 56kbps/mono</li>
+						<li>fm/tape =&gt; 112kbps</li>
+						<li>hifi =&gt; 160kbps</li>
+						<li>cd =&gt; 192kbps</li>
+						<li>studio =&gt; 256kbps</li>
+					</ul>
+				</li>
+				<li><em>Alt-presets<br />
+					</em>These are newer, high-quality presets.
+					<ul>
+						<li>Standard: This preset should generally be transparent to most people on most music and is already quite high in quality. Uses <a href="#vbr">VBR</a>.</li>
+						<li>Extreme: If you have extremely good hearing and similar equipment, this preset will generally provide slightly higher quality than the &quot;standard&quot; mode. Uses <a href="#vbr">VBR</a>.</li>
+						<li>Insane: <a href="#cbr">CBR</a> 320kbps; highest quality possible from presets. This preset will usually be overkill for most people and most situations, but if you must have the absolute highest quality with no regard to filesize, this is the way to go.</li>
+					</ul>
+				</li>
+				<li><em>r3mix</em><br />
+					Uses r3mix VBR preset. See <a href="http://www.r3mix.net">www.r3mix.net</a> for more details.
+				</li>
+			</ul>
+			<strong>Encoding Method:</strong>
+			<ul>
+				<li><em>Constant Bitrate (CBR)</em><a name="cbr" id="cbr"></a><br />
+					This is the default encoding mode, and also the most basic. In this mode, the bitrate will be the same for the whole file. It means that each part of your mp3 file will be using the same number of bits. The musical passage beeing a difficult one to encode or an easy one, the encoder will use the same bitrate, so the quality of your mp3 is variable. Complex parts will be of a lower quality than the easiest ones. The main advantage is that the final files size won't change and can be accurately predicted.</li>
+				<li><em>Average Bitrate (ABR)</em><a name="abr" id="abr"></a><br />
+					In this mode, you choose the encoder will maintain an average bitrate while using higher bitrates for the parts of your music that need more bits. The result will be of higher quality than CBR encoding but the average file size will remain predictible, so this mode is highly recommended over CBR. This encoding mode is similar to what is reffered as vbr in AAC or Liquid Audio (2 other compression technologies).</li>
+				<li><em>Variable bitrate (VBR)</em><a name="vbr" id="vbr"></a><br />
+					In this mode, you choose the desired quality on a scale from 9 (lowest quality/biggest distortion) to 0 (highest quality/lowest distortion). Then encoder tries to maintain the given quality in the whole file by choosing the optimal number of bits to spend for each part of your music. The main advantage is that you are able to specify the quality level that you want to reach, but the inconvenient is that the final file size is totally unpredictible.
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<blockquote>
+		<p><strong>Mode:</strong><br />
+			Joint-stereo is the default mode for  stereo  files with  VBR  when -V is more than 4 or fixed bitrates of 160kbs or less.  At  higher  fixed  bitrates  or higher VBR settings, the default is stereo.</p>
+		<ul>
+			<li><em>Stereo</em><br />
+				In  this  mode,  the encoder makes no use of potentially existing correlations between the two  input channels.   It  can,  however,  negotiate  the  bit demand between both channel, i.e. give one  channel more  bits  if  the other contains silence or needs less bits because of a lower complexity.</li>
+			<li><em>Joint</em><br />
+				In this mode, the encoder will make use of a correlation  between  both channels.  The signal will be matrixed into a sum (&quot;mid&quot;), computed by  L+R,  and difference  (&quot;side&quot;)  signal,  computed by L-R, and more bits are allocated to the mid  channel.   This will effectively increase the bandwidth if the signal does not have too much stereo separation,  thus giving a significant gain in encoding quality.<br />
+				<br />
+				Using mid/side stereo inappropriately can result in audible compression artifacts.  To  much  switching between  mid/side and regular stereo can also sound bad.  To  determine  when  to  switch  to  mid/side stereo,  LAME  uses a much more sophisticated algorithm than that described in the ISO documentation, and thus is safe to use in joint stereo mode.</li>
+			<li><em>Forced<br />
+				</em>This mode will force MS joint stereo on all frames. It is slightly faster than  joint  stereo,  but  it should  be  used  only  if  you are sure that every frame of the input file has very little stereo sep- aration.</li>
+			<li><em>Dual<br />
+				</em>In this mode, the 2 channels will be totally inden- pendently encoded.  Each channel will have  exactly half  of  the  bitrate.   This mode is designed for applications  like  dual  languages  encoding  (for example:  English  in one channel and French in the other).   Using  this  encoding  mode  for  regular stereo  files will result in a lower quality encoding.</li>
+			<li><em>Mono<br />
+				</em>The input will be encoded as a mono signal.  If  it was  a  stereo  signal,  it  will be downsampled to mono.  The downmix is calculated as the sum of  the left and right channel, attenuated by 6 dB.	</li>
+		</ul>
+	</blockquote>
+	<ul>
+		<li><div class="h3">VBR</div>
+			<strong>Minimum Bitrate</strong><br />
+			Specifies the minimum bitrate to be used.  However, in  order to avoid wasted space, the smallest frame size available will be used during silences.		<br />
+			<br />
+			<strong>Maximum Bitrate</strong><br />
+			Specifies the maximum allowed bitrate.<br />
+			<br />
+			<strong>VBR Routine</strong>
+			<ul>
+				<li><em>Old:</em>Invokes the oldest, most tested VBR algorithm.   It produces  very  good  quality  files, though is not very fast.  This has, up through v3.89,  been  considered the &quot;workhorse&quot; VBR algorithm.</li>
+				<li><em>		New: </em>Invokes  the  newest  VBR  algorithm.   During  the development of version  3.90,  considerable  tuning was  done  on this algorithm, and it is now considered to be on par with the original --vbr-old.   It has  the  added  advantage of being very fast (over twice as fast as --vbr-old).
+				</li>
+			</ul>
+			<strong>VBR	Quality</strong><br />
+			Enable VBR (Variable  BitRate)  and  specifies  the value  of  VBR  quality (default = 4).  0 = highest quality.		<br />
+			<br />
+			<strong>Strictly	enforce	minimum	bitrate</strong><br />
+			This is mainly for use with hardware  players  that do not support low bitrate mp3.<br /><br />
+			Without  this  option, the minimum bitrate will be ignored for passages of analog silence,  i.e.  when the  music level is below the absolute threshold of human hearing (ATH).<br /><br />
+			<strong>Disable writing LAME tag</strong><br />
+			Disable writing of the INFO Tag on encoding. This tag in embedded in frame 0 of  the  MP3  file. It  includes  some  information  about the encoding options of the file, and in VBR it lets  VBR  aware players correctly seek and compute playing times of VBR files.
+		</li>
+		<li><div class="h3">ABR</div>
+			<strong>Average Bitrate</strong><br />
+			Turns  on  encoding with a targeted average bitrate of n kbits, allowing to  use  frames  of  different <br />
+		    sizes.   The allowed range of  8 - 310, you can use any integer value within that range.</li>
+		<li><div class="h3">CBR</div>
+			<strong>		Bitrate</strong><br />
+			Default is 128</li>
+		<li><div class="h3">Filters</div>
+			<strong>		Disable Filters</strong><br />
+			Tells the encoder to use full bandwidth and to disable all filters.  By  default,  the  encoder  uses some  highpass  filtering at low bitrates, in order to keep a good quality by giving more bits to  more important frequencies. Increasing  the  bandwidth from the default setting might produce ringing artifacts  at  low  bitrates. Use with care!</li>
+		<li><div class="h3"><a name="experttab"></a>Expert</div>
+			You can enter LAME command-line parmeters here to access features not currently in the GUI.  If you use this feature, all other settings are ignored.</li>
+		<li><div class="h3"><a name="profilestab"></a>Profiles</div>
+			Profiles are basically user-made presets. They let you save your current encoder settings for later use.<strong> </strong>Profiles are stored as text files in LameBrain's folder.<strong><br />
+			<br />
+			Load a profile</strong><br />
+			Choose a profile from the popup menu and click the Load Profile button to load that profile's settings.<br />
+		    <br />
+		    <strong>Save current settings as a profile</strong><br />
+			Enter a profile name and click the Save Profile button to save the current encoding settings to a profile.</li>
+			<li><div class="h3"><a name="statswindow"></a>Stats</div>
+			<a href="javascript:popup('images/screenshot_statswindow.jpg')" title="View Screenshot"><img class="thumbnail" src="images/thumb_screenshot_statswindow.jpg" alt="Stats Window Screenshot" width="100" height="46" border="1" align="right" /></a>
+			The Stats Window displays information about an ongoing encoding process.  It also maintains a log of LAME and curl commands and responses.</li>
+	</ul>
+	<p>&nbsp;</p>
+	
+	<p class="h2"><a name="preferences"></a>Preferences</p>
+	Various program behaviors can be changed here.  Changes made are only saved if the [Save] button is clicked.
+	
+	<a href="javascript:popup('images/screenshot_preferences.jpg')" title="View Screenshot"><img class="thumbnail" src="images/thumb_screenshot_preferences.jpg" alt="Preferences Screenshot" width="91" height="100" border="1" align="right" /></a>
+	<ul>
+		<li><div class="h3">Encoder Preferences</div>
+			<b>LAME path</b><br />
+			This is the UNIX path to the location of the LAME binary.  The default is
+			the path where LameBrain resides.  Hitting the <img src="images/resetbutton.jpg" alt="[Reset]" width="48" height="19" align="middle" />
+			button will revert the path to the default.<p />
+			
+			<b>Open stats window on encoding start</b><br />
+			If this is checked, the <a href="#statswindow">Stats Window</a> will open whenever encoding starts.<p />
+			
+			<b>Delete source file after encoding</b><br />
+			If this is checked, the source file will be deleted when encoding finishes successfully.
+			This only applies to the <a href="#singlefileencoder">Single File</a> and <a href="#batchencoder">Batch Encoders</a><p />			
+		</li>
+		<li><div class="h3">Batch Encoder Preferences</div>
+			<b>Recurse subfolders of dragged folders</b><br />
+			If this is checked, the <a href="#batchencoder">Batch Encoder</a> will
+			explore the subfolders of any folders dragged onto the window.<p />
+			<b>Only accept files with these extensions</b><br />
+			Only files with extensions that match those in this box can be added
+			to the queue.  Extensions should be separated with semicolons <b>(;)</b>,
+			and should not contain the period separator <b>(.)</b>.  For example:<br /><br />
+			<span class="code">wav;mp3;aiff</span><br /><br />
+			
+			If this field is left blank, <i>any</i> file can be placed in the queue,
+			including hidden files contained in dragged folders (like .DStore)
+		</li>
+		<li><div class="h3">CD Ripper Preferences</div>
+			<b><a name="#freedbserver"></a>FreeDB Server</b><br />
+			This determines the server that will handle FreeDB queries.  The default is
+			<b>freedb.freedb.org</b>, which chooses a server randomly.  If you want to try
+			other servers, check the <a href="http://www.freedb.org/">FreeDB.org site</a> for a list of mirrors.<p />
+
+			<b>Automatically query FreeDB server</b><br />
+			If this is checked, the CD Ripper will automatically query the FreeDB
+			server on startup if a CD is present.<p />
+			
+			<b><a name="namingscheme"></a>Naming scheme</b><br />
+			This allows you to customize the way the CD Ripper stores and names files.
+			You can construct a path and name for your files using the following
+			macros:
+			<ul>
+				<li><b>%cdartist%</b> - The artist for this CD</li>
+				<li><b>%cdtitle%</b> - The title of this CD</li>
+				<li><b>%cdyear%</b> - The year the CD was released</li>
+				<li><b>%tracktitle%</b> - The title of the current track</li>
+				<li><b>%tracknum%</b> - The number of the current track (ex. "1", "2")</li>
+				<li><b>%tracknumpad%</b> - The number of the current track with a
+				leading zero if necessary (ex. "01", "02")</li>
+			</ul>
+			
+			Let's say you're ripping the Ministry CD <i>The Land of Rape and Honey</i>.
+			If you're naming scheme is this:<br />
+			
+			<span class="code">%cdartist%:%cdtitle%:%tracknumpad% - %tracktitle%</span><br /><br />
+			
+			the first track would be ripped to:<br /><br />
+			
+			<span class="code"><i>CD Ripper Target Directory</i>:Ministry:The Land of Rape and Honey:01 - Stigmata.mp3</span>
+			<p />
+			
+			<b>Create .m3u playlist</b><br />
+			If this is checked, LameBrain will generate a .m3u playlist file and put it in the same 
+			directory as the encoded files after encoding is complete.  This type of playlist is primarily
+			useful for Winamp on Windows and portable mp3 players.
+			<p />
+		</li>
+		<li><div class="h3">General Preferences</div>
+			<b>Check for new version on startup</b><br />
+			<p>If this is checked, LameBrain will download a text file from the
+			funkatron.com web server that contains information about the latest
+			version of LameBrain.  If the version you have is older, a window will
+			be displayed containing information about the new version, and you'll have
+			an opportunity to download the new version.  <i>No personal information is
+			passed on to the server</i>.</p>
+			
+			<b>Open these windows on startup</b><br />
+			<p>Check which windows you want to open when LameBrain starts.</p>
+		</li>
+	</ul>
+	
+	<br clear="all" />
+	
+	
+	<p class="h1"><a name="faq"></a>Frequently Asked Questions</p>
+	
+	<p class="h2"><a name="whatversionlame"></a>What version of LAME comes with LameBrain?</p>
+	
+	<p>LAME comes with a binary of LAME version 3.95.1 with the following compiler optimizations:</p>
+	
+	<div class="code">-faltivec -mcpu=7450 -mdynamic-no-pic -funroll-loops -ffast-math -fstrict-aliasing -O3</div>
+	
+	With these optimizations, LAME appears to encode files about 10% faster than a standard compile on a G4+ processor.  While I do not have a G3 or original G4 (slower than 500Mhz) machine to test with, this version should still work on those processors.  If you want to use the non-optimized binary, though, you can download it from <a href="http://www.funkatron.com/mt/files/lame-3.93.1-osx.gz" target="_blank">http://www.funkatron.com/mt/files/lame-3.93.1-osx.gz</a><p />
+	
+	<p class="h2"><a name="whyslow"></a>Why is LAME so slow on the Mac?  How can I make it faster?</p>
+	LAME currently doesn't take advantage of the Altivec extensions in G4 and G5 processors.  A lot of work has been put into taking advantage of similar extensions on Intel and AMD CPUs, though, so LAME ususally runs a lot faster on these processors.  If and when LAME developers put some time into optimizing for Altivec, though, the PPCs should be very competitive.  To contact the developers, post on the <a href="http://minnie.tuhs.org/mailman/listinfo/mp3encoder" target="_blank">mp3encoder mailing list</a> or <a href="http://lame.sourceforge.net/developers.html" target="_blank">mail them directly</a>.
+
+	<p class="h2"><a name="whycantencode101x"></a>Why can't I encode anything with LameBrain under OS X 10.1.x?</p>
+	The version of LAME that comes with LameBrain appears to only work under 10.2.x.  You can download a version of LAME that works with 10.1.x from <a href="http://www.culater.net/osd/packages.html" target="_blank">http://www.culater.net/osd/packages.html</a>.  Then change the LAME path in the preferences to point to the version that package installs.  It <i>should</i> be <span class="code">/usr/local/bin/lame</span>.
+
+	<p class="h2"><a name="bugreport"></a>How do I make a bug report/feature request?</p>
+	The best way is to subscribe to the LameBrain discussion list by sending a blank email to <a href="mailto:lamebrain-discuss-subscribe@funkatron.com">lamebrain-discuss-subscribe@funkatron.com</a>.  There you can talk with other LameBrain users and the developer about anything related to the program.  Otherwise, email <a href="mailto:lamebrain@funkatron.com">lamebrain@funkatron.com</a> with your report/request.<p />
+
+	<p>&nbsp;</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Screenshot</title>
+		<script language='javascript'>
+			var temp=self.location.href.split("?");
+			var picUrl = (temp.length>1)?temp[1]:"";
+			var NS = (navigator.appName=="Netscape")?true:false;
+
+			function fitPic() {
+				iWidth = (NS)?window.innerWidth:document.body.clientWidth;
+				iHeight = (NS)?window.innerHeight:document.body.clientHeight;
+				iWidth = document.images[0].width - iWidth;
+				iHeight = document.images[0].height - iHeight;
+				window.resizeBy(iWidth+5, iHeight+5);
+				self.focus();
+			};
+		</script>
+	</head>
+	<body bgcolor="#FFFFFF" onload='fitPic();' topmargin="0" marginheight="0" leftmargin="0" marginwidth="0">
+		<script language='javascript'>
+			document.write( "<img src='" +picUrl +"' border=0>" );
+		</script>
+	</body>
+
+</html>

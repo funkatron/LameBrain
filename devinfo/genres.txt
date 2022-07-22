@@ -1,0 +1,50 @@
+  0: Blues                 49: Gothic                98: Easy Listening      
+  1: Classic Rock          50: Darkwave              99: Acoustic            
+  2: Country               51: Techno-Industrial    100: Humour              
+  3: Dance                 52: Electronic           101: Speech              
+  4: Disco                 53: Pop-Folk             102: Chanson             
+  5: Funk                  54: Eurodance            103: Opera               
+  6: Grunge                55: Dream                104: Chamber Music       
+  7: Hip-Hop               56: Southern Rock        105: Sonata              
+  8: Jazz                  57: Comedy               106: Symphony            
+  9: Metal                 58: Cult                 107: Booty Bass          
+ 10: New Age               59: Gangsta              108: Primus              
+ 11: Oldies                60: Top 40               109: Porn Groove         
+ 12: Other                 61: Christian Rap        110: Satire              
+ 13: Pop                   62: Pop/Funk             111: Slow Jam            
+ 14: R&B                   63: Jungle               112: Club                
+ 15: Rap                   64: Native American      113: Tango               
+ 16: Reggae                65: Cabaret              114: Samba               
+ 17: Rock                  66: New Wave             115: Folklore            
+ 18: Techno                67: Psychadelic          116: Ballad              
+ 19: Industrial            68: Rave                 117: Power Ballad        
+ 20: Alternative           69: Showtunes            118: Rhythmic Soul       
+ 21: Ska                   70: Trailer              119: Freestyle           
+ 22: Death Metal           71: Lo-Fi                120: Duet                
+ 23: Pranks                72: Tribal               121: Punk Rock           
+ 24: Soundtrack            73: Acid Punk            122: Drum Solo           
+ 25: Euro-Techno           74: Acid Jazz            123: A capella           
+ 26: Ambient               75: Polka                124: Euro-House          
+ 27: Trip-Hop              76: Retro                125: Dance Hall          
+ 28: Vocal                 77: Musical              126: Goa                 
+ 29: Jazz+Funk             78: Rock & Roll          127: Drum & Bass         
+ 30: Fusion                79: Hard Rock            128: Club House          
+ 31: Trance                80: Folk                 129: Hardcore            
+ 32: Classical             81: Folk/Rock            130: Terror              
+ 33: Instrumental          82: National Folk        131: Indie               
+ 34: Acid                  83: Swing                132: BritPop             
+ 35: House                 84: Fast-Fusion          133: NegerPunk           
+ 36: Game                  85: Bebob                134: Polsk Punk          
+ 37: Sound Clip            86: Latin                135: Beat                
+ 38: Gospel                87: Revival              136: Christian Gangsta   
+ 39: Noise                 88: Celtic               137: Heavy Metal         
+ 40: AlternRock            89: Bluegrass            138: Black Metal         
+ 41: Bass                  90: Avantgarde           139: Crossover           
+ 42: Soul                  91: Gothic Rock          140: Contemporary Christian
+ 43: Punk                  92: Progressive Rock     141: Christian Rock      
+ 44: Space                 93: Psychedelic Rock     142: Merengue            
+ 45: Meditative            94: Symphonic Rock       143: Salsa               
+ 46: Instrumental Pop      95: Slow Rock            144: Thrash Metal        
+ 47: Instrumental Rock     96: Big Band             145: Anime               
+ 48: Ethnic                97: Chorus               146: JPop                
+ 49: Gothic                98: Easy Listening       147: SynthPop            
